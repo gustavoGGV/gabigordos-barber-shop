@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* splash screen */
+
+#splash-screen {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* login */
+
+.body-login {
+    background-color: black;
+}
+
+.label-login {
+    color: white;
+    font-family: sans-serif;
+}
