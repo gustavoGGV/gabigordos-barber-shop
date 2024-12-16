@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Menu | Gabigordo's Barber Shop</title>
+</head>
+<body id="body-main-menu">
+    
+    <header id="header-main-menu">
+        <i onclick="show()" id="menu-btn" class="bi bi-list-ul"></i>
+        <p id="title">Gabigordo's Barber Shop</p>
+    </header>
+
+    <!-- <img id="icon-gabigordo-main-menu" src="images/gabigordo-icon.png"> -->
+
+    <nav id="menu-list">
+        <ul>
+            <li><i id="schedule-btn-nav" class="bi bi-calendar-check"><a class="links-nav" href="schedule.html"> Agendar</a></i></li>
+            <li><i id="gallery-btn-nav" class="bi bi-camera2"><a class="links-nav" href="gallery.html"> Galeria</a></i></li>
+            <li><i id="workers-btn-nav" class="bi bi-person-fill"><a class="links-nav" href="workers.html"> Profissionais</a></i></li>
+            <li><i id="history-btn-nav" class="bi bi-clock-fill"><a class="links-nav" href="history.html"> Histórico</a></i></li>
+        </ul>
+    </nav>
+
+    <h1 id="welcome"></h1>
+
+    <div class="services">
+        <div class="icon-main-menu1">
+            <img class="icon-img1" src="images/haircut-icon.png">
+            <h1 class="icon-price1">Corte <br>R$60,00</h1>
+        </div>
+
+        <div class="icon-main-menu2">
+            <img class="icon-img2" src="images/beard-icon.png">
+            <h1 class="icon-price2">Barba <br>R$40,00</h1>
+        </div>
+
+        <div class="icon-main-menu1">
+            <img class="icon-img1" src="images/eyebrow-icon.png">
+            <h1 id="eyebrow-text">Sobrancelha<br></h1>
+            <h1 id="eyebrow-price">R$30,00</h1>
+        </div>
+
+        <div class="icon-main-menu2">
+            <img class="icon-img2" src="images/soap-icon.png">
+            <h1 class="icon-price2">Lavagem <br>R$40,00</h1>
+        </div>
+
+        <div class="icon-main-menu1">
+            <img class="icon-img1" src="images/coloring-icon.png">
+            <h1 class="icon-price1">Cor <br>R$80,00</h1>
+        </div>
+    </div>
+
+    <div id="schedule">
+        <button id="schedule-btn"><a class="schedule-link" href="schedule.html">Agendar horário</a></button>
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script>
+
+        function show(){
+            var nav=document.getElementById('menu-list');
+            if(nav.style.display==='block'){
+                nav.style.display='none';
+            } else{
+                nav.style.display='block';
+            }
+        }
+
+        const name=localStorage.getItem('name: ');
+        const welcome=document.getElementById('welcome');
+        welcome.textContent='Bora renovar seu estilo, '+name+'?';
+
+    </script>
+    
+</body>
+</html>

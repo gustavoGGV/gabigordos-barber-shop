@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Agendar | Gabigordo's Barber Shop</title>
+</head>
+<body id="body-schedule">
+
+    <header class="header-back">
+        <a class="back-btn" href="main-menu.html"><i class="bi bi-arrow-left-circle-fill"></i></a>
+    </header>
+    
+    <img id="icon-gabigordo-schedule" src="images/gabigordo-icon.png">
+
+    <form id="form-schedule">
+        <div class="schedule-container">
+            <h2 class="label-schedule">Data</h2>
+            <input type="date" id="date" class="input-schedule" required>
+            <h2 class="label-schedule">Horário</h2>
+            <input type="time" id="time" class="input-schedule" placeholder="digite seu e-mail" required>
+            <h2 class="label-schedule">Serviço</h2>
+            <div class="checkbox-schedule-container">
+                <label class="checkbox-schedule"><input id="haircut" class="checkbox" type="checkbox"> Corte</label>
+                <label class="checkbox-schedule"><input id="beard" class="checkbox" type="checkbox"> Barba</label>
+                <label class="checkbox-schedule"><input id="eyebrow" class="checkbox" type="checkbox"> Sobrancelha<br></label>
+                <label class="checkbox-schedule"><input id="soap" class="checkbox" type="checkbox"> Lavagem</label>
+                <label class="checkbox-schedule"><input id="coloring" class="checkbox" type="checkbox"> Cor</label>
+            </div>
+            <button type="submit" id="sent-schedule" class="enter">Agendar</button>
+        </div>
+    </form>
+
+    <script>
+
+        const sentSchedule=document.getElementById('form-schedule');
+
+        sentSchedule.addEventListener('submit', (done)=>{
+
+            done.preventDefault();
+            const date=document.getElementById('date').value;
+            const time=document.getElementById('time').value;
+            let totalCost=0;
+            const services=[];
+            if(document.getElementById('haircut').checked){
+                services.push('Corte');
+                totalCost+=60;
+            }
+            if(document.getElementById('beard').checked){
+                services.push('Barba');
+                totalCost+=40;
+            }
+            if(document.getElementById('eyebrow').checked){
+                services.push('Sobrancelha');
+                totalCost+=30;
+            }
+            if(document.getElementById('soap').checked){
+                services.push('Lavagem');
+                totalCost+=40;
+            }
+            if(document.getElementById('coloring').checked){
+                services.push('Cor');
+                totalCost+=80;
+            }
+
+            let history=JSON.parse(localStorage.getItem('history'))||[];
+            history.push({ date, time, services, totalCost });
+            localStorage.setItem('history', JSON.stringify(history));
+            window.location.href='main-menu.html';
+
+        });
+
+    </script>
+
+</body>
+</html>

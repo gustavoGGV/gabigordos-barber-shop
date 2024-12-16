@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Histórico | Gabigordo's Barber Shop</title>
+</head>
+<body id="body-history">
+
+    <header class="header-back">
+        <a class="back-btn" href="main-menu.html"><i class="bi bi-arrow-left-circle-fill"></i></a>
+    </header>
+
+    <div id="card-history"></div>
+
+    <script>
+
+        const history=JSON.parse(localStorage.getItem('history'))||[];
+        const cardHistory=document.getElementById('card-history');
+        if(history.length>0){
+            history.forEach((element, i)=>{
+
+                const registry=document.createElement('div');
+                registry.classList.add('registry-history');
+
+                const number=document.createElement('p');
+                number.style.color='white';
+                number.style.fontSize='30px';
+                number.style.fontFamily='sans-serif';
+                number.textContent=i+1+' - ';
+                registry.appendChild(number);
+
+                const hr=document.createElement('hr');
+                registry.appendChild(hr);
+
+                const date=document.createElement('p');
+                date.style.color='white';
+                date.style.fontSize='30px';
+                date.style.fontFamily='sans-serif';
+                date.style.fontWeight='bold';
+                date.textContent='Data: '+element.date;
+                registry.appendChild(date);
+
+                const time=document.createElement('p');
+                time.style.color='white';
+                time.style.fontSize='30px';
+                time.style.fontFamily='sans-serif';
+                time.style.fontWeight='bold';
+                time.textContent='Horário: '+element.time;
+                registry.appendChild(time);
+
+                const totalCost=document.createElement('p');
+                totalCost.style.color='white';
+                totalCost.style.fontSize='30px';
+                totalCost.style.fontFamily='sans-serif';
+                totalCost.style.fontWeight='bold';
+                totalCost.textContent='Custo: R$'+element.totalCost+',00';
+                registry.appendChild(totalCost);
+
+                const hr2=document.createElement('hr');
+                registry.appendChild(hr2);
+
+                const servicesList=document.createElement('div');
+                element.services.forEach(service=>{
+                    const item=document.createElement('p');
+                    item.style.color='white';
+                    item.style.fontSize='30px';
+                    item.style.fontFamily='sans-serif';
+                    item.textContent=service;
+                    servicesList.appendChild(item);
+                });
+
+                const br=document.createElement('br');
+                servicesList.appendChild(br);
+                const br2=document.createElement('br');
+                servicesList.appendChild(br2);
+
+                registry.appendChild(servicesList);
+                cardHistory.appendChild(registry);
+
+            });
+
+        }
+
+    </script>
+    
+</body>
+</html>

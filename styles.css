@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 * {
     margin: 0;
     padding: 0;
@@ -13,11 +15,356 @@
 
 /* login */
 
-.body-login {
+#body-login {
     background-color: black;
 }
 
 .label-login {
     color: white;
     font-family: sans-serif;
+}
+
+.login-container {
+    margin-left: 25%;
+}
+
+.input-text-login {
+    border-color: white;
+    background-color: black;
+    border-width: 3px;
+    border-radius: 10px;
+    height: 25px;
+    padding: 15px;
+    margin-bottom: 10%;
+    outline: none;
+    color: white;
+}
+
+.input-text-login:focus {
+    transition: 0.2s;
+    border-color: black;
+    background-color: white;
+    color: black;
+}
+
+#icon-gabigordo-login {
+    width: 40%;
+    margin-left: 29%;
+    margin-top: 29%;
+}
+
+#sent-login {
+    width: 40%;
+    height: 40px;
+    margin-left: 12%;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+}
+
+#sent-login:active {
+    background-color: black;
+    border-color: white;
+    border-width: 3px;
+    color: white;
+}
+
+/* main menu */
+
+#body-main-menu {
+    background-color: black;
+}
+
+#menu-btn {
+    color: black;
+    font-size: 50px;
+    margin-left: 2%;
+}
+
+#header-main-menu {
+    background-color: white;
+}
+
+#title {
+    font-family: sans-serif;
+    font-weight: bold;
+    float: right;
+    margin-right: 7%;
+    margin-top: 5%;
+}
+
+#menu-list {
+    display: none;
+    border: solid;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 5px;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    width:98%;
+    color: white;
+}
+
+.links-nav {
+    text-decoration: none;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+/*#icon-gabigordo-main-menu {
+    width: 35%;
+    float: right;
+}*/
+
+#welcome {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.icon-main-menu1 {
+    background-color: white;
+    padding: 20px;
+    margin-top: 5%;
+    border-radius: 30px;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.icon-img1 {
+    width: 40%;
+    margin-left: 7%;
+}
+
+.icon-price1 {
+    float: right;
+    margin-top: 17%;
+    margin-right: 7%;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.icon-main-menu2 {
+    background-color: black;
+    padding: 20px;
+    margin-top: 5%;
+    border-radius: 30px;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.icon-img2 {
+    width: 40%;
+    margin-left: 7%;
+}
+
+.icon-price2 {
+    float: right;
+    margin-top: 17%;
+    margin-right: 7%;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+}
+
+#eyebrow-text {
+    float: right;
+    margin-top: 17%;
+    margin-right: 7%;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 21px;
+}
+
+#eyebrow-price {
+    float: right;
+    margin-right: 7%;
+    margin-top: -18%;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#schedule {
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 10%;
+}
+
+#schedule-btn {
+    width: 100%;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+}
+
+#schedule-btn:active {
+    background-color: black;
+    border-color: white;
+    border-width: 3px;
+    color: white;
+}
+
+.schedule-link {
+    text-decoration: none;
+    color: black;
+}
+
+.schedule-link:active {
+    color: white;
+}
+
+/* schedule */
+
+#body-schedule {
+    background-color: black;
+}
+
+#icon-gabigordo-schedule {
+    width: 40%;
+    margin-left: 29%;
+    margin-top: 29%;
+}
+
+.label-schedule {
+    color: white;
+    font-family: sans-serif;
+}
+
+.schedule-container {
+    margin-left: 10%;
+}
+
+.input-schedule {
+    border-color: white;
+    background-color: black;
+    border-width: 3px;
+    border-radius: 10px;
+    height: 25px;
+    padding: 15px;
+    margin-bottom: 10%;
+    outline: none;
+    color: white;
+    width: 90%;
+}
+
+.input-schedule:focus {
+    transition: 0.2s;
+    border-color: black;
+    background-color: white;
+    color: black;
+}
+
+.checkbox-schedule-container {
+    margin-bottom: 10%;
+    margin-top: 2%;
+}
+
+.checkbox-schedule {
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+#sent-schedule {
+    width: 40%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    margin-left: 25%;
+}
+
+#sent-schedule:active {
+    background-color: black;
+    border-color: white;
+    border-width: 3px;
+    color: white;
+}
+
+/* gallery */
+
+#body-gallery {
+    background-color: black;
+}
+
+.header-back {
+    background-color: white;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: black;
+    font-size: 50px;
+    margin-left: 2%;
+}
+
+.gallery-photo {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.card {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.card-text {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+/* workers */
+
+#body-workers {
+    background-color: black;
+}
+
+.workers-photo {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.workers-title {
+    width: 90%;
+    margin: 5%;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+/* history */
+
+#body-history {
+    background-color: black;
+}
+
+#card-history {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-style: solid;
+    border-color: white;
+    border-radius: 30px;
+    border-width: 5px;
+    padding: 20px;
 }

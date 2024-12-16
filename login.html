@@ -1,20 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Login | Gabigordo's Barber Shop</title>
 </head>
-<body class="body-login">
+<body id="body-login">
 
-    <div class="login-container">
-        <h2 class="label-login">E-mail</h2>
-        <input type="email" id="email" placeholder="digite seu e-mail" required>
-        <h2 class="label-login">Senha</h2>
-        <input type="password" id="password" placeholder="digite sua senha" required>
-        <button type="submit" class="enter">Entrar</button>
-    </div>
+    <img id="icon-gabigordo-login" src="images/gabigordo-icon.png">
+
+    <form id="form-login">
+        <div class="login-container">
+            <h2 class="label-login">Nome</h2>
+            <input type="text" id="name" class="input-text-login" placeholder="digite seu nome" required>
+            <h2 class="label-login">E-mail</h2>
+            <input type="email" id="email" class="input-text-login" placeholder="digite seu e-mail" required>
+            <h2 class="label-login">Senha</h2>
+            <input type="password" id="password" class="input-text-login" placeholder="digite sua senha" required>
+            <button type="submit" id="sent-login" class="enter">Entrar</button>
+        </div>
+    </form>
+
+    <script>
+
+        const sentLogin=document.getElementById('form-login');
+        
+        sentLogin.addEventListener('submit', (done)=>{
+            
+            done.preventDefault();
+            const name=document.getElementById('name').value;
+            const email=document.getElementById('email').value;
+            const password=document.getElementById('password').value;
+            localStorage.setItem('name: ', name);
+            localStorage.setItem('e-mail: ', email);
+            localStorage.setItem('password', password);
+            window.location.href='main-menu.html';
+
+        });
+
+    </script>
     
 </body>
 </html>
